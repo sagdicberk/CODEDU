@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Diğer stiller buraya */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    color: #fff;
+    justify-content: center;
+
+}
+
+header {
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #09001d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    filter: drop-shadow(0 0 5px #09001d);
+}
+
+nav a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navi a:hover {
+    color: #21c400;
+}
+
+.navi a:hover,
+.navi a:active,
+.navi a:focus {
+    color: #21c400;
+}
+
+h2 {
+    width: 950px;
+    font-size: 2em;
+    color: #fff;
+    padding-top: 15px;
+    text-align: center;
+    background: #09001d;
+    font-weight: 700;
+    filter: drop-shadow(0 0 5px #09001d);
+}
+
+main {
+    width: 950px;
+    height: auto;
+    background: #09001d;
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    /* Flex container olarak tanımla */
+    align-items: center;
+    justify-content: center;
+    margin: 90px auto 0;
+
+    /* Yatayda ortalamak için otomatik marj ekle */
+}
+
+.baslik-liste {
+    width: 950px;
+    height: auto;
+
+    background: #13003d;
+    list-style: none;
+
+}
+
+.baslik-liste li {
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    border-bottom: #09001d;
+    padding-left: 25px;
+    font-size: 25px;
+    border-bottom: 5px solid #060014;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.daire {
+    margin-top: 10px;
+    margin-right: 15px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    background: gray;
+}
+
+/* Existing styles */
+
+.icerik {
+    background: gainsboro;
+    color: #000;
+    padding: 35px 50px;
+    border-bottom: 5px solid gray;
+    transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease; /* Add height transition */
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
+
+.icerik.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto; /* Auto height for smooth transition */
+}
+
+/* Other existing styles */
+
+.icerik p {
+    text-align: justify;
+}
+
+.icerik button {
+    height: 30px;
+    width: 70px;
+    border: 1px solid #09001d;
+    background: #136e01c5;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    float: right;
+    transition: opacity 1s ease, visibility 1s ease, height 1s ease; /* Increase duration to 1s */
+
+}
+
+.icerik button:hover {
+    background: #060014;
+}
+
+
+#sinavgiris,
+#sinavTamamla {
+    background: peru;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    margin-top: 50px;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    font-size: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+#icerik2,
+#user-email,
+#sorular,
+#icerik3,
+#icerik4 {
+    display: none;
+}
