@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tasarım</title>
+    <link rel="stylesheet" href="still.css">
+    <script src="script.js"></script>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <span class="logo">CODEDU.</span>
+        <nav class="navi">
+
+            <a href="../Kurslar.html">Kurslar</a>
+            <a href="../profile.html">Profil</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Web Tasarım</h2><br><br>
+        <ul class="baslik-liste" id="kurs">
+            <li onclick="ac('1');">Web Tasarımına Giriş <div class="daire" id="daire1"></div>
+            </li>
+            <div class="icerik" id="icerik1">
+                <h3>Web Tasarımı Nedir?</h3><br>
+                <p>Web tasarımı, web sitelerinin planlanması, oluşturulması ve güncellenmesi sürecidir. Bu süreç, sayfa
+                    düzeni, grafik tasarımı, içerik üretimi ve kullanıcı arayüzü tasarımı gibi çeşitli disiplinleri
+                    içerir.</p><br>
+                <h3>Web Tasarımının Önemi</h3><br>
+                <p><b>İlk İzlenim:</b> Kullanıcıların web sitenize ilk kez geldiğinde oluşturdukları izlenimi belirler.
+                </p><br>
+                <p><b>Kullanıcı Deneyimi:</b> İyi bir tasarım, kullanıcıların siteyi kolayca gezinebilmesini ve
+                    aradıkları bilgilere ulaşabilmesini sağlar.</p><br>
+                <p><b>Marka İmajı:</b> Web sitesi, markanızın dijital vitrini olup, profesyonel bir görünüm sağlar.</p>
+                <br>
+                <h3>Web Tasarımın Temel İlkeleri</h3><br>
+                <p><b>Uyumluluk:</b> Web sitenizin tüm cihazlar ve tarayıcılarda doğru çalışması gerekir.</p><br>
+                <p><b>Kullanılabilirlik:</b> Sitenin kullanıcı dostu ve kolay gezilebilir olması önemlidir.</p><br>
+                <p><b>Estetik:</b> Görsel tasarım, renk seçimi, tipografi ve düzenin kullanıcılar üzerinde olumlu bir
+                    etkisi olmalıdır.</p><br>
+                <p><button id="buton1" onclick="tamamla(1)">Okudum</button></p>
+            </div>
+            <li onclick="ac('2');">HTML ve CSS Temelleri <div class="daire" id="daire2"></div>
+            </li>
+            <div class="icerik" id="icerik2">
+                <h3>HTML Nedir?</h3><br>
+                <p>HTML (HyperText Markup Language), web sayfalarının yapısını oluşturmak için kullanılan bir işaretleme
+                    dilidir. HTML, metin, resim, bağlantı ve diğer içeriklerin web tarayıcıları tarafından nasıl
+                    görüntüleneceğini belirler.</p><br>
+                <h3>HTML Temel Etiketleri</h3><br>
+                <p><b>&lt;html&gt;:</b> Belgenin kök etiketidir.</p><br>
+                <p><b>&lt;head&gt;:</b> Başlık bilgilerini içerir.</p><br>
+                <p><b>&lt;body&gt;:</b> Sayfanın görünen kısmını içerir.</p><br>
+                <p><b>&lt;div&gt;:</b> Sayfa düzeninde bölümler oluşturur.</p><br>
+                <p><b>&lt;p&gt;:</b> Paragraf etiketidir.</p><br>
+                <h3>CSS Nedir?</h3><br>
+                <p>CSS (Cascading Style Sheets), web sayfalarının görünümünü ve düzenini tanımlamak için kullanılan stil
+                    dilidir. HTML ile oluşturulan yapısal içerikleri, CSS ile görsel olarak çekici hale
+                    getirebilirsiniz.</p><br>
+                <h3>CSS Temel Kuralları</h3><br>
+                <p><b>Seçiciler:</b> HTML elemanlarını seçmek için kullanılır (örneğin, sınıf seçicileri, ID
+                    seçicileri).</p><br>
+                <p><b>Özellikler:</b> CSS ile elemanların stil özellikleri belirlenir (örneğin, renk, yazı tipi, kenar
+                    boşlukları).</p><br>
+                <p><b>Değerler:</b> Özelliklerin hangi değerleri alacağını belirler (örneğin, kırmızı renk, 16px yazı
+                    tipi boyutu).</p><br>
+                <p><button id="buton2" onclick="tamamla(2)">Okudum</button></p>
+            </div>
+            <li onclick="ac('3');">Web Tasarım Araçları <div class="daire" id="daire3"></div>
+            </li>
+            <div class="icerik" id="icerik3">
+                <h3>Web Tasarımda Kullanılan Araçlar</h3><br>
+                <p>Web tasarımı sırasında kullanılan çeşitli araçlar ve yazılımlar bulunmaktadır. Bu araçlar, tasarım
+                    sürecini daha verimli ve etkili hale getirmeye yardımcı olur.</p><br>
+                <h3>Popüler Web Tasarım Araçları</h3><br>
+                <p><b>Adobe Photoshop:</b> Grafik tasarım ve görüntü düzenleme için kullanılan profesyonel bir araçtır.
+                </p><br>
+                <p><b>Sketch:</b> MacOS için özel olarak tasarlanmış vektör grafik düzenleme yazılımıdır.</p><br>
+                <p><b>Figma:</b> Tarayıcı tabanlı bir tasarım aracı olup, ekiplerle ortak çalışmayı kolaylaştırır.</p>
+                <br>
+                <p><b>Visual Studio Code:</b> Gelişmiş kod düzenleme özellikleri sunan bir kod editörüdür.</p><br>
+                <h3>Web Tasarım Araçlarının Önemi</h3><br>
+                <p><b>Verimlilik:</b> Tasarım araçları, projelerin daha hızlı tamamlanmasını sağlar.</p><br>
+                <p><b>Kalite:</b> Profesyonel araçlar, yüksek kaliteli ve tutarlı tasarımlar oluşturmanıza yardımcı
+                    olur.</p><br>
+                <p><b>İşbirliği:</b> Ekipler arası işbirliğini artırarak, daha iyi sonuçlar elde edilmesini sağlar.</p>
+                <br>
+                <p><button id="buton3" onclick="tamamla(3)">Okudum</button></p>
+            </div>
+            <li onclick="ac('4');">Kullanıcı Deneyimi (UX) ve Kullanıcı Arayüzü (UI) Tasarımı <div class="daire"
+                    id="daire4"></div>
+            </li>
+            <div class="icerik" id="icerik4">
+                <h3>UX ve UI Tasarımı Nedir?</h3><br>
+                <p>Kullanıcı Deneyimi (UX) tasarımı, kullanıcıların bir ürünle etkileşimini ve genel memnuniyetini
+                    artırmayı amaçlar. Kullanıcı Arayüzü (UI) tasarımı ise, bu etkileşimin gerçekleştiği arayüzün görsel
+                    ve işlevsel tasarımını içerir.</p><br>
+                <h3>UX Tasarımının Temel İlkeleri</h3><br>
+                <p><b>Kullanılabilirlik:</b> Ürünün kullanıcılar tarafından kolayca kullanılabilmesi.</p><br>
+                <p><b>Erişilebilirlik:</b> Ürünün tüm kullanıcılar tarafından erişilebilir olması.</p><br>
+                <p><b>İçerik Stratejisi:</b> Kullanıcıya sunulan bilgilerin düzenli ve anlaşılır olması.</p><br>
+                <h3>UI Tasarımının Temel İlkeleri</h3><br>
+                <p><b>Görsel Hiyerarşi:</b> Bilgilerin kullanıcıya en anlaşılır şekilde sunulması.</p><br>
+                <p><b>Tutarlılık:</b> Tüm arayüz elemanlarının uyumlu ve tutarlı olması.</p><br>
+                <p><b>Geri Bildirim:</b> Kullanıcıların yaptıkları işlemler hakkında anında bilgi alması.</p><br>
+                <p><button id="buton4" onclick="tamamla(4)">Okudum</button></p>
+            </div>
+        </ul>
+
+        <button id="sinavgiris" onclick="NetSin()">Sınava Başla</button>
+        <br>
+        <div id="sorular">
+            <ul class="baslik-liste">
+                <li>1.</li>
+                <div class="icerik">
+                    <h3>Web tasarımının temel amacı nedir?</h3><br>
+                    <p><input type="radio" name="Soru1" id="1-a"><b>A) </b>Kullanıcıların web sitesini daha kolay
+                        kullanmasını sağlamak</p><br>
+                    <p><input type="radio" name="Soru1" id="1-b"><b>B) </b>Web sitesinin sadece görsel olarak çekici
+                        olması</p><br>
+                    <p><input type="radio" name="Soru1" id="1-c"><b>C) </b>Sadece metin içeriği sunmak</p><br>
+                    <p><input type="radio" name="Soru1" id="1-d"><b>D) </b>Hiçbir amacı yoktur</p><br>
+                </div>
+                <li>2.</li>
+                <div class="icerik">
+                    <h3>HTML'de bir paragraf etiketi hangisidir?</h3><br>
+                    <p><input type="radio" name="Soru2" id="2-a"><b>A) </b>&lt;h1&gt;</p><br>
+                    <p><input type="radio" name="Soru2" id="2-b"><b>B) </b>&lt;div&gt;</p><br>
+                    <p><input type="radio" name="Soru2" id="2-c"><b>C) </b>&lt;p&gt;</p><br>
+                    <p><input type="radio" name="Soru2" id="2-d"><b>D) </b>&lt;span&gt;</p><br>
+                </div>
+                <li>3.</li>
+                <div class="icerik">
+                    <h3>CSS'de arka plan rengini ayarlamak için hangi özellik kullanılır?</h3><br>
+                    <p><input type="radio" name="Soru3" id="3-a"><b>A) </b>color</p><br>
+                    <p><input type="radio" name="Soru3" id="3-b"><b>B) </b>font-size</p><br>
+                    <p><input type="radio" name="Soru3" id="3-c"><b>C) </b>background-color</p><br>
+                    <p><input type="radio" name="Soru3" id="3-d"><b>D) </b>margin</p><br>
+                </div>
+                <li>4.</li>
+                <div class="icerik">
+                    <h3>Web tasarımında kullanılan hangi araç, grafik tasarım ve görüntü düzenleme için yaygın olarak
+                        kullanılır?</h3><br>
+                    <p><input type="radio" name="Soru4" id="4-a"><b>A) </b>Adobe Photoshop</p><br>
+                    <p><input type="radio" name="Soru4" id="4-b"><b>B) </b>Visual Studio Code</p><br>
+                    <p><input type="radio" name="Soru4" id="4-c"><b>C) </b>Sketch</p><br>
+                    <p><input type="radio" name="Soru4" id="4-d"><b>D) </b>Figma</p><br>
+                </div>
+                <li>5.</li>
+                <div class="icerik">
+                    <h3>UX tasarımının amacı nedir?</h3><br>
+                    <p><input type="radio" name="Soru5" id="5-a"><b>A) </b>Sadece görsel tasarım yapmak</p><br>
+                    <p><input type="radio" name="Soru5" id="5-b"><b>B) </b>Kullanıcıların bir ürünle etkileşimini ve
+                        memnuniyetini artırmak</p><br>
+                    <p><input type="radio" name="Soru5" id="5-c"><b>C) </b>Yalnızca yazılım geliştirmek</p><br>
+                    <p><input type="radio" name="Soru5" id="5-d"><b>D) </b>Veritabanı yönetimi yapmak</p><br>
+                </div>
+                <li>6.</li>
+                <div class="icerik">
+                    <h3>HTML'de başlık etiketi hangisidir?</h3><br>
+                    <p><input type="radio" name="Soru6" id="6-a"><b>A) </b>&lt;title&gt;</p><br>
+                    <p><input type="radio" name="Soru6" id="6-b"><b>B) </b>&lt;header&gt;</p><br>
+                    <p><input type="radio" name="Soru6" id="6-c"><b>C) </b>&lt;h1&gt;</p><br>
+                    <p><input type="radio" name="Soru6" id="6-d"><b>D) </b>&lt;head&gt;</p><br>
+                </div>
+                <li>7.</li>
+                <div class="icerik">
+                    <h3>Web sayfalarının tüm cihazlar ve tarayıcılarda doğru çalışmasını sağlayan ilke nedir?</h3>
+                    <br>
+                    <p><input type="radio" name="Soru7" id="7-a"><b>A) </b>Kullanılabilirlik</p><br>
+                    <p><input type="radio" name="Soru7" id="7-b"><b>B) </b>Estetik</p><br>
+                    <p><input type="radio" name="Soru7" id="7-c"><b>C) </b>Uyumluluk</p><br>
+                    <p><input type="radio" name="Soru7" id="7-d"><b>D) </b>Görsel Hiyerarşi</p><br>
+                </div>
+                <li>8.</li>
+                <div class="icerik">
+                    <h3>CSS'de bir öğenin kenar boşluğunu ayarlamak için hangi özellik kullanılır?</h3><br>
+                    <p><input type="radio" name="Soru8" id="8-a"><b>A) </b>padding</p><br>
+                    <p><input type="radio" name="Soru8" id="8-b"><b>B) </b>margin</p><br>
+                    <p><input type="radio" name="Soru8" id="8-c"><b>C) </b>border</p><br>
+                    <p><input type="radio" name="Soru8" id="8-d"><b>D) </b>width</p><br>
+                </div>
+
+                <li>9.</li>
+                <div class="icerik">
+                    <h3>Kullanıcı arayüzü (UI) tasarımının temel amacı nedir?</h3><br>
+                    <p><input type="radio" name="Soru9" id="9-a"><b>A) </b>Yazılım geliştirmek</p><br>
+                    <p><input type="radio" name="Soru9" id="9-b"><b>B) </b>Veritabanı yönetimi</p><br>
+                    <p><input type="radio" name="Soru9" id="9-c"><b>C) </b>Kullanıcı arayüzünün görsel ve işlevsel
+                        tasarımını yapmak</p><br>
+                    <p><input type="radio" name="Soru9" id="9-d"><b>D) </b>Sadece içerik yazmak</p><br>
+                </div>
+                <li>10.</li>
+                <div class="icerik">
+                    <h3>Web tasarımında hangi araç, tarayıcı tabanlı olup ekiplerle ortak çalışmayı kolaylaştırır?
+                    </h3><br>
+                    <p><input type="radio" name="Soru10" id="10-a"><b>A) </b>Adobe Photoshop</p><br>
+                    <p><input type="radio" name="Soru10" id="10-b"><b>B) </b>Figma</p><br>
+                    <p><input type="radio" name="Soru10" id="10-c"><b>C) </b>Sketch</p><br>
+                    <p><input type="radio" name="Soru10" id="10-d"><b>D) </b>Visual Studio Code</p><br>
+                </div>
+            </ul>
+        </div>
+        <button id="sinavTamamla" data-course="Web">Sınavı Tamamla</button>
+    </main>
+
+
+    <script type="module" src="sinav.js"></script>
+
+</body>
+
+</html>

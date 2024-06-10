@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network</title>
+    <link rel="stylesheet" href="still.css">
+    <script src="script.js"></script>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <span class="logo">CODEDU.</span>
+        <nav class="navi">
+            
+            <a href="../Kurslar.html">Kurslar</a>
+            <a href="../profile.html">Profil</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Network</h2><br><br>
+        <ul class="baslik-liste" id="kurs">
+            <li  onclick="ac('1');">Ağ Temelleri ve İlkeleri <div class="daire" id="daire1"></div>
+            </li>
+            <div class="icerik" id="icerik1">
+                <p>
+                <h3>Ağ Nedir?</h3><br>
+                <p>
+                    Bir ağ (network), birden fazla bilgisayar, akıllı telefon, yazıcı gibi cihazların birbirine bağlı
+                    olduğu ve veri paylaşımı ile iletişimin sağlandığı bir iletişim sistemi olarak tanımlanır. Bu
+                    cihazlar, genellikle birbirleriyle veri alışverişi yapmak, kaynakları (dosyaları, yazıcıları vb.)
+                    paylaşmak veya internete erişmek için ağ üzerinde bağlanırlar.
+                </p><br>
+                <h3>Ağın Temel Unsurları</h3><br>
+
+                <b>Cihazlar:</b> Bilgisayarlar, akıllı telefonlar, tabletler, yazıcılar, yönlendiriciler, anahtarlar
+                (switches), modemler ve diğer ağ cihazları gibi donanım parçaları, ağın temel unsurlarını oluşturur.
+                <br>
+                <b>Bağlantılar:</b> Bu cihazlar arasında veri iletimini sağlayan fiziksel veya kablosuz bağlantılar
+                bulunur. Ethernet kabloları, fiber optik kablolar, Wi-Fi ağları ve mobil veri bağlantıları gibi
+                farklı bağlantı türleri kullanılabilir.
+                <br>
+                <b>Protokoller:</b> Veri iletişiminde kullanılan kurallar ve standartlar, protokoller olarak
+                adlandırılır.
+                Örneğin, Internet Protokolü (IP) adresleme ve iletim kontrol protokolleri (TCP), veri iletişimi için
+                yaygın olarak kullanılan protokollerdir.
+                <br><br>
+                <h3>Ağ Türleri ve Kapsamı</h3>
+                <br>
+                <b>LAN (Yerel Alan Ağı):</b> Bir binanın veya belirli bir alanın içindeki cihazlar arasında kısa
+                mesafeli
+                iletişim sağlar. Ev ağları ve işyeri ağları genellikle LAN'a örnektir.
+                <br>
+                <b>WAN (Geniş Alan Ağı):</b> Coğrafi olarak uzak yerlerdeki cihazlar arasında iletişim sağlar. İnternet,
+                birçok farklı WAN'ın bir araya gelmesiyle oluşan bir ağdır.
+                <br>
+                <b>MAN (Metropol Alan Ağı):</b> Belirli bir şehir veya bölgedeki cihazlar arasında iletişim sağlar.
+                Genellikle büyük şehirlerde kurulan fiber optik ağlar MAN'a örnektir.
+                <br><br>
+                <h3>Ağın Özellikleri</h3>
+                <br>
+                <b>İletişim:</b> Ağ, farklı cihazlar arasında iletişim sağlar. Bu iletişim, veri alışverişi, dosya
+                paylaşımı, medya akışı ve diğer çeşitli hizmetleri içerebilir.
+                <br>
+                <b>Paylaşım:</b> Ağ, cihazlar arasında kaynakların (dosyalar, yazıcılar, internet bağlantısı vb.)
+                paylaşımını kolaylaştırır. Bu, verimliliği artırır ve işbirliğini teşvik eder.
+                <br>
+                <b>Erişim:</b> Ağ, kullanıcıların bilgiye ve kaynaklara erişimini sağlar. Bu, kullanıcıların ağ
+                üzerindeki
+                bilgilere ve hizmetlere kolayca ulaşmasını sağlar.
+                <br>
+                <p>Ağlar, günümüzde bireylerin, kurumların ve kuruluşların iletişim ve veri paylaşımı ihtiyaçlarını
+                    karşılayan temel bir altyapıdır. Bağlı cihazların ve internetin yaygınlaşmasıyla, ağların önemi
+                    giderek artmaktadır.</p>
+                </p>
+
+
+                <button id="buton1" onclick="tamamla(1)">Okudum</button>
+            </div>
+            <li onclick="ac('2')">Ağ Protokolleri<div class="daire" id="daire2"></div>
+            </li>
+            <div class="icerik" id="icerik2">
+                <p>
+                <h3>Ağ Protokolleri Nedir?</h3><br>
+                Ağ protokolleri, bilgisayarlar arasında iletişim kurarken kullanılan belirli kurallar ve
+                standartlardır. Bu protokoller, verilerin nasıl gönderileceği, alınacağı, yönlendirileceği ve
+                işleneceği konusunda rehberlik eder. İnternet gibi büyük ağlar, birbiriyle iletişim kurmak için bu
+                protokolleri kullanır.
+                <br><br>
+                <h3>İletişimde Temel İlkeler:</h3><br>
+                <b>Veri Yapısı:</b> İletilecek verilerin nasıl yapılandırılacağı belirlenir. Bu, genellikle bir veri
+                paketi
+                veya veri segmenti şeklinde olur.
+                <br>
+                <b>Adresleme:</b> Her cihazın benzersiz bir tanımlayıcıya (adrese) sahip olduğu sistemdir. Bu adresler,
+                iletişimin nereden nereye gideceğini belirler.
+                <br>
+                <b>Yönlendirme:</b> Verilerin kaynak cihazdan hedef cihaza nasıl yönlendirileceği belirlenir. Bu,
+                genellikle birden çok ağ cihazı aracılığıyla gerçekleşir.
+                <br><br>
+                <h3>Önemli Ağ Protokolleri</h3><br>
+                <b>TCP/IP:</b> İnternet Protokolü (IP) ve Transfer Kontrol Protokolü (TCP) olmak üzere iki ana protokol
+                tarafından oluşturulan bir ağ protokolü setidir. Veri paketlerinin nasıl bölüneceğini,
+                adresleneceğini, yönlendirileceğini ve yeniden birleştirileceğini belirler.
+                <br>
+                <b>HTTP/HTTPS:</b> Hipertext Transfer Protokolü (HTTP), web tarayıcıları ve sunucular arasında web
+                sayfalarının iletimi için kullanılır. HTTPS, HTTP'nin güvenli versiyonudur ve verilerin
+                şifrelenmesini sağlar.
+                <br>
+                <b>DNS:</b> Alan Adı Sistemi (DNS), internete erişim için kullanılan insan dostu alan adlarını (örneğin,
+                www.example.com) IP adreslerine (örneğin, 192.0.2.1) dönüştürür.
+                <br>
+                <b>SMTP/POP/IMAP:</b> Elektronik posta iletişimi için kullanılan protokollerdir. Simple Mail Transfer
+                Protokolü (SMTP), iletilerin gönderilmesi için kullanılırken, Post Office Protocol (POP) ve Internet
+                Message Access Protocol (IMAP) iletilerin alınması için kullanılır.
+                <br>
+                <b>FTP/SFTP:</b> Dosya transferi için kullanılan protokollerdir. Dosya Transfer Protokolü (FTP),
+                dosyaların
+                sunucu ve istemciler arasında iletilmesini sağlar, SFTP ise FTP'nin güvenli versiyonudur ve
+                verilerin şifrelenmesini sağlar.
+                <br><br>
+                Ağ protokolleri, bilgisayarlar arasındaki iletişimi sağlamak için temel bir yapı oluşturur ve
+                internetin düzgün çalışmasını sağlar. Bu protokoller, farklı cihazlar arasında uyumlu bir iletişim
+                sağlamak için standartlaşmıştır.
+                </p>
+                <button id="buton2" onclick="tamamla(2)">Okudum</button>
+            </div>
+            <li onclick="ac('3')">Yönlendirme ve Anahtarlam<div class="daire" id="daire3"></div>
+            </li>
+            <div class="icerik" id="icerik3">
+                <p>
+                <h3>Yönlendirme ve Anahtarlamaya Giriş</h1>
+                    <p>Bilgisayar ağlarında, iletişim iki temel kavram etrafında gerçekleşir: yönlendirme ve
+                        anahtarlama. Her ikisi de, veri paketlerinin kaynaktan hedefe doğru nasıl iletilip
+                        yönlendirileceğini belirleyen temel prensipleri ifade eder. Ancak, her biri farklı ağ
+                        ortamlarında kullanılır ve farklı işlevlere sahiptir.</p>
+                    <br>
+                    <h3>Yönlendirme:</h3><br>
+                    <p>Yönlendirme, veri paketlerinin ağ üzerindeki rotalarını belirleyen ve onları hedeflerine
+                        ulaştıran bir süreçtir. Bu genellikle yönlendiriciler (router) tarafından gerçekleştirilir.
+                        Yönlendirici, bir ağdaki cihazlar arasında veri iletimini sağlar ve veri paketlerini alıcıya en
+                        uygun yolu kullanarak yönlendirir.</p>
+                    <br>
+                    <h3>Yönlendirme Süreci:</h3>
+
+                    <br><b>Adresleme:</b> Veri paketleri, kaynak ve hedef adresleri ile etiketlenir.</li>
+                    <br><b>Yönlendirme Kararı:</b> Yönlendirici, veri paketinin hedefine ulaşmak için en uygun yolu
+                    belirler.</li>
+                    <br><b>Yönlendirme Tablosu Kullanımı:</b> Yönlendirici, yönlendirme tablosunu kullanarak en uygun
+                    rotayı seçer.</li>
+                    <br><b>Yönlendirme:</b> Veri paketi, seçilen rotaya göre ilgili çıkış noktasına yönlendirilir.</li>
+                    <br>
+                    <br>
+                    <h3>Anahtarlama:</h3>
+                    <p>Anahtarlama, veri paketlerinin bir ağdaki cihazlar arasında doğrudan iletilmesini sağlayan bir
+                        süreçtir. Bu genellikle anahtarlayıcılar (switch) tarafından gerçekleştirilir. Anahtarlayıcılar,
+                        veri paketlerini alıcıya doğrudan ileten cihazlardır ve bu işlemi genellikle MAC adresleri
+                        kullanılarak yaparlar.</p>
+                    <br>
+                    <h3>Anahtarlama Süreci:</h3>
+
+                    <br><b>Öğrenme:</b> Anahtarlayıcı, bağlı cihazların MAC adreslerini öğrenir ve bunları bir tabloda
+                    saklar.</li>
+                    <br><b>Adresleme:</b> Veri paketleri, kaynak ve hedef MAC adresleri ile etiketlenir.</li>
+                    <br><b>Yönlendirme Kararı:</b> Anahtarlayıcı, veri paketinin hedef MAC adresine göre doğrudan
+                    iletilmesi gereken portu belirler.</li>
+                    <br><b>Anahtarlama:</b> Veri paketi, belirlenen port aracılığıyla hedef cihaza iletilir.</li>
+                    <br>
+                    <br>
+                    <h3>Yönlendirme ve Anahtarlama Arasındaki Farklar:</h3>
+
+                    <br><strong>Yerel İletim vs. Genişletilmiş İletim:</strong> Anahtarlama, yerel ağlarda (LAN)
+                    kullanılırken, yönlendirme genellikle genişletilmiş ağlarda (WAN) kullanılır.</li>
+                    <br><strong>İletişim Tarzı:</strong> Anahtarlama, veri paketlerinin doğrudan cihazlar arasında
+                    iletilmesini sağlar; yönlendirme ise veri paketlerini hedefe yönlendirir.</li>
+                    <br><strong>MAC Adresi vs. IP Adresi:</strong> Anahtarlama, genellikle MAC adreslerini kullanırken,
+                    yönlendirme IP adreslerini kullanır.</li>
+                    </br></p>
+                    <button id="buton3" onclick="tamamla(3)">Okudum</button>
+            </div>
+            <li onclick="ac('4')">OSI katmanları<div class="daire" id="daire4"></div>
+            </li>
+            <div class="icerik" id="icerik4">
+                <p>
+                <h3>OSI (Açık Sistemler Arası) Referans Modeli</h3><br>
+                <p>OSI (Açık Sistemler Arası) referans modeli, bilgisayar ağlarında iletişim süreçlerini tanımlamak için
+                    kullanılan bir standarttır. Bu model, iletişim protokollerinin işlevlerini ve ilişkilerini
+                    belirlemek için kullanılır ve ağ iletişimini yedi katmana böler.</p>
+                <br>
+                <p><strong>Fiziksel Katman (Katman 1):</strong> Veri iletimi için donanım ve fiziksel bağlantıyı sağlar.
+                </p>
+                <br>
+                <p><strong>Ağ Katmanı (Katman 2):</strong> Veri paketlerinin yönlendirilmesi ve adreslenmesi için hizmet
+                    sağlar.</p>
+                <br>
+                <p><strong>Veri Bağlantı Katmanı (Katman 3):</strong> Ağ üzerinde doğrudan iletişimi yönetir, hata
+                    düzeltme ve akış kontrolü sağlar.</p>
+                <br>
+                <p><strong>Ağ Katmanı (Katman 4):</strong> Uygulamalar arasında güvenilir veri aktarımı sağlar, hedef
+                    cihazlar arasında veri alışverişi gerçekleştirir.</p>
+                <br>
+                <p><strong>Uygulama Katmanı (Katman 5):</strong> Kullanıcıların ağ hizmetlerine erişmesini sağlar, veri
+                    formatını ve sunucu hizmetlerini belirler.</p>
+                <br>
+                <p><strong>Sunum Katmanı (Katman 6):</strong> Veri formatını dönüştürme ve şifreleme/deşifreleme
+                    işlemlerini gerçekleştirir.</p>
+                <br>
+                <p><strong>Çalışma Katmanı (Katman 7):</strong> Ağ üzerinde uygulamalar arasında etkileşim sağlar,
+                    protokol dönüştürme ve veri sıkıştırma işlemlerini gerçekleştirir.</p>
+                <br>
+                <p>OSI referans modeli, bilgisayar ağlarının karmaşıklığını azaltmak için bir standart sağlar. Ayrıca,
+                    farklı cihazlar arasında iletişimi sağlamak için farklı katmanlardaki protokolleri ve hizmetleri
+                    tanımlar. Bu sayede, farklı üreticilerin cihazları ve yazılımları arasında uyumluluk sağlanır.</p>
+                <br>
+                <p><strong>Örnek Kullanım Senaryosu:</strong> Bir web tarayıcısı, OSI modelini kullanarak bir web
+                    sitesine erişmek için adımları izler. Kullanıcı, web tarayıcısında bir URL girer. Uygulama katmanı,
+                    kullanıcının isteğini HTTP protokolüyle oluşturur. HTTP protokolü, veriyi sunum katmanına gönderir.
+                </p>
+                </p>
+                <button id="buton4" onclick="tamamla(4)">Okudum</button>
+            </div>
+        </ul>
+
+        <button id="sinavgiris" onclick="NetSin()">Sınava Başla</button>
+        <br>
+        <div id="sorular">
+            <ul class="baslik-liste">
+                <li>1.</li>
+                <div class="icerik">
+                    <h3>Ağ Nedir?</h3><br>
+
+                    <p><input type="radio" name="Soru1" id="1-a"><b>A) </b>Bir iletişim protokolü</p><br>
+                    <p><input type="radio" name="Soru1" id="1-b"><b>B) </b>Veri paylaşımı sağlayan bir iletişim sistemi</p><br>
+                    <p><input type="radio" name="Soru1" id="1-c"><b>C) </b>Bir yazılım uygulaması</p><br>
+                    <p><input type="radio" name="Soru1" id="1-d"><b>D) </b>Bir veri depolama birimi</p><br>
+
+                </div>
+                <li>2.</li>
+                <div class="icerik">
+                    <h3>Ağın Temel Unsurları Nelerdir?</h3><br>
+
+                    <p><input type="radio" name="Soru2" id="2-a"><b>A) </b>Cihazlar ve uygulamalar</p><br>
+                    <p><input type="radio" name="Soru2" id="2-b"><b>B) </b>Cihazlar ve bağlantılar</p><br>
+                    <p><input type="radio" name="Soru2" id="2-c"><b>C) </b>Bağlantılar ve protokoller</p><br>
+                    <p><input type="radio" name="Soru2" id="2-d"><b>D) </b>Protokoller ve uygulamalar</p><br>
+
+                </div>
+                <li>3.</li>
+                <div class="icerik">
+                    <h3>LAN, WAN ve MAN Ağ Türleri Ne Anlama Gelir?</h3><br>
+
+                    <p><input type="radio" name="Soru3" id="3-a"><b>A) </b>LAN: Geniş Alan Ağı, WAN: Yerel Alan Ağı, MAN: Metropol Alan Ağı</p><br>
+                    <p><input type="radio" name="Soru3" id="3-b"><b>B) </b>LAN: Yerel Alan Ağı, WAN: Geniş Alan Ağı, MAN: Metropol Alan Ağı</p><br>
+                    <p><input type="radio" name="Soru3" id="3-c"><b>C) </b>LAN: Metropol Alan Ağı, WAN: Yerel Alan Ağı, MAN: Geniş Alan Ağı</p><br>
+                    <p><input type="radio" name="Soru3" id="3-d"><b>D) </b>LAN: Lokal Alan Ağı, WAN: Dünya Alan Ağı, MAN: Büyükşehir Alan Ağı</p><br>
+
+                </div>
+                <li>4.</li>
+                <div class="icerik">
+                    <h3>Ağ protokolleri ne işe yarar?</h3><br>
+
+                    <p><input type="radio" name="Soru4" id="4-a"><b>A) </b>Bilgisayarların hızını arttırmak</p><br>
+                    <p><input type="radio" name="Soru4" id="4-b"><b>B) </b>Bilgisayarlar arası iletişim kuralları ve standartları belirlemek</p><br>
+                    <p><input type="radio" name="Soru4" id="4-c"><b>C) </b>Bilgisayarların güvenliğini sağlamak</p><br>
+                    <p><input type="radio" name="Soru4" id="4-d"><b>D) </b>Bilgisayarların verimliliğini ölçmek</p><br>
+
+                </div>
+                <li>5.</li>
+                <div class="icerik">
+                    <h3>TCP/IP protokol seti neyi belirler?</h3><br>
+
+                    <p><input type="radio" name="Soru5" id="5-a"><b>A) </b>Web sayfalarının nasıl gösterileceğini</p><br>
+                    <p><input type="radio" name="Soru5" id="5-b"><b>B) </b>E-postaların nasıl şifreleneceğini</p><br>
+                    <p><input type="radio" name="Soru5" id="5-c"><b>C) </b>Veri paketlerinin nasıl bölüneceğini, adresleneceğini, yönlendirileceğini ve yeniden birleştirileceğini</p><br>
+                    <p><input type="radio" name="Soru5" id="5-d"><b>D) </b>Dosyaların nasıl saklanacağını</p><br>
+
+                </div>
+                <li>6.</li>
+                <div class="icerik">
+                    <h3>DNS’nin temel işlevi nedir?</h3><br>
+
+                    <p><input type="radio" name="Soru6" id="6-a"><b>A) </b>Verileri şifrelemek</p><br>
+                    <p><input type="radio" name="Soru6" id="6-b"><b>B) </b>E-posta iletilerini göndermek</p><br>
+                    <p><input type="radio" name="Soru6" id="6-c"><b>C) </b>Alan adlarını IP adreslerine dönüştürmek</p><br>
+                    <p><input type="radio" name="Soru6" id="6-d"><b>D) </b>Dosya transferi yapmak</p><br>
+
+                </div>
+                <li>7.</li>
+                <div class="icerik">
+                    <h3>Yönlendirme sürecinde ilk adım nedir?</h3><br>
+
+                    <p><input type="radio" name="Soru7" id="7-a"><b>A) </b>Yönlendirme kararı</p><br>
+                    <p><input type="radio" name="Soru7" id="7-b"><b>B) </b>Yönlendirme tablosu kullanımı</p><br>
+                    <p><input type="radio" name="Soru7" id="7-c"><b>C) </b>Adresleme</p><br>
+                    <p><input type="radio" name="Soru7" id="7-d"><b>D) </b>Yönlendirme</p><br>
+
+                </div>
+                <li>8.</li>
+                <div class="icerik">
+                    <h3>Anahtarlama ve yönlendirme arasındaki farklardan biri nedir?</h3><br>
+
+                    <p><input type="radio" name="Soru8" id="8-a"><b>A) </b>Anahtarlama, genellikle IP adreslerini kullanırken, yönlendirme MAC adreslerini kullanır.</p><br>
+                    <p><input type="radio" name="Soru8" id="8-b"><b>B) </b>Anahtarlama, veri paketlerinin doğrudan cihazlar arasında iletilmesini sağlar; yönlendirme ise veri paketlerini hedefe yönlendirir.</p><br>
+                    <p><input type="radio" name="Soru8" id="8-c"><b>C) </b>Yönlendirme, yerel ağlarda (LAN) kullanılırken, anahtarlama genellikle genişletilmiş ağlarda (WAN) kullanılır.</p><br>
+                    <p><input type="radio" name="Soru8" id="8-d"><b>D) </b>Yönlendirme, veri paketlerinin doğrudan cihazlar arasında iletilmesini sağlar; anahtarlama ise veri paketlerini hedefe yönlendirir.</p><br>
+
+                </div>
+                <li>9.</li>
+                <div class="icerik">
+                    <h3>OSI modelinin 'Fiziksel Katman’ı ne sağlar?</h3><br>
+
+                    <p><input type="radio" name="Soru9" id="9-a"><b>A) </b>Veri paketlerinin yönlendirilmesi</p><br>
+                    <p><input type="radio" name="Soru9" id="9-b"><b>B) </b>Güvenilir veri aktarımı</p><br>
+                    <p><input type="radio" name="Soru9" id="9-c"><b>C) </b>Veri formatının dönüştürülmesi</p><br>
+                    <p><input type="radio" name="Soru9" id="9-d"><b>D) </b>Donanım ve fiziksel bağlantı</p><br>
+
+                </div>
+                <li>10.</li>
+                <div class="icerik">
+                    <h3>OSI modelinde ‘Çalışma Katmanı’ hangi işlevleri gerçekleştirir?</h3><br>
+
+                    <p><input type="radio" name="Soru10" id="10-a"><b>A) </b>Hata düzeltme ve akış kontrolü</p>
+                    <br>
+                    <p><input type="radio" name="Soru10" id="10-b"><b>B) </b>Protokol dönüştürme ve veri sıkıştırma</p>
+                    <br>
+                    <p><input type="radio" name="Soru10" id="10-c"><b>C) </b>Kullanıcıların ağ hizmetlerine erişimini sağlama</p>
+                    <br>
+                    <p><input type="radio" name="Soru10" id="10-d"><b>D) </b>Veri paketlerinin adreslenmesi</p>
+                    <br>
+
+                </div>
+            </ul>
+        </div>
+        <button id="sinavTamamla" data-course="network">Sınavı Tamamla</button>
+    </main>
+
+
+    <script type="module" src="sinav.js"></script>
+    
+</body>
+
+</html>

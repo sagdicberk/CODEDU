@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İşletim Sistemleri</title>
+    <link rel="stylesheet" href="still.css">
+    <script src="script.js"></script>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <span class="logo">CODEDU.</span>
+        <nav class="navi">
+
+            <a href="../Kurslar.html">Kurslar</a>
+            <a href="../profile.html">Profil</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>İşletim Sistemleri</h2><br><br>
+        <ul class="baslik-liste" id="kurs">
+            <li onclick="ac('1');">İşletim Sistemlerinin Temelleri<div class="daire" id="daire1"></div>
+            </li>
+            <div class="icerik" id="icerik1">
+                <h3>İşletim Sistemi Nedir?</h3>
+                <p>İşletim sistemi (OS), bilgisayar donanımı ile kullanıcılar arasında köprü görevi gören yazılımdır.
+                    Temel işlevleri arasında kaynak yönetimi, donanım denetimi ve yazılım uygulamalarının çalışmasını
+                    sağlamak bulunur.</p>
+                <br>
+                <h3>İşletim Sisteminin Temel Unsurları</h3>
+                <p><b>Çekirdek (Kernel):</b> İşletim sisteminin kalbi olup, tüm temel donanım ve yazılım işlemlerini
+                    yönetir.</p>
+                <br>
+                <p><b>Dosya Sistemi:</b> Verilerin organize edilmesi ve depolanmasını sağlayan sistemdir.</p>
+                <br>
+                <p><b>Kullanıcı Arayüzü:</b> Kullanıcıların işletim sistemi ile etkileşimde bulunmasını sağlar. Bu
+                    genellikle grafiksel kullanıcı arayüzü (GUI) veya komut satırı arayüzü (CLI) olarak görülür.</p>
+                <br>
+                <h3>İşletim Sistemlerinin Türleri</h3>
+                <p><b>Masaüstü İşletim Sistemleri:</b> Windows, macOS ve Linux gibi bireysel kullanıcılara yönelik
+                    sistemlerdir.</p>
+                <br>
+                <p><b>Mobil İşletim Sistemleri:</b> Android ve iOS gibi akıllı telefon ve tabletlerde kullanılan
+                    sistemlerdir.</p>
+                <br>
+                <p><b>Sunucu İşletim Sistemleri:</b> Windows Server, Linux (Red Hat, CentOS) gibi sunuculara yönelik
+                    sistemlerdir.</p>
+                <br>
+                <h3>İşletim Sisteminin İşlevleri</h3>
+                <p><b>Kaynak Yönetimi:</b> İşlemci, bellek ve depolama gibi donanım kaynaklarını etkin bir şekilde
+                    yönetir.</p>
+                <br>
+                <p><b>Çok Görevlilik:</b> Aynı anda birden fazla işlemi çalıştırma yeteneği sağlar.</p>
+                <br>
+                <p><b>Güvenlik:</b> Kullanıcıların ve verilerin güvenliğini sağlar, erişim kontrolleri ve antivirüs
+                    yazılımları ile desteklenir.</p>
+                <br>
+                <p><button id="buton1" onclick="tamamla(1)">Okudum</button></p>
+            </div>
+            <li onclick="ac('2');">İşletim Sistemi Mimarisi <div class="daire" id="daire2"></div>
+            </li>
+            <div class="icerik" id="icerik2">
+                <h3>İşletim Sistemi Mimarisi Nedir?</h3>
+                <p>İşletim sistemi mimarisi, işletim sisteminin yapı taşlarını ve bu bileşenlerin nasıl etkileşimde
+                    bulunduğunu açıklayan yapıdır.</p>
+                <br>
+                <h3>Mimari Bileşenler</h3>
+                <p><b>Monolitik Çekirdek:</b> Tüm hizmetlerin çekirdek içinde çalıştığı mimari türüdür. Linux buna
+                    örnektir.</p>
+                <br>
+                <p><b>Mikro Çekirdek:</b> Çekirdek minimum hizmetleri sunar ve diğer hizmetler kullanıcı modunda
+                    çalışır. Örnek: Minix.</p>
+                <br>
+                <p><b>Modüler Çekirdek:</b> Çekirdek modüller eklenip çıkarılabilir şekilde tasarlanmıştır. Örnek:
+                    Windows NT.</p>
+                <br>
+                <h3>İşletim Sistemi Katmanları</h3>
+                <p><b>Donanım:</b> Fiziksel cihazlar ve bileşenler.</p>
+                <br>
+                <p><b>Çekirdek:</b> Temel sistem yönetimi ve kontrol hizmetleri.</p>
+                <br>
+                <p><b>Sistem Çağrıları:</b> Uygulama yazılımlarının işletim sistemi hizmetlerine erişimini sağlar.</p>
+                <br>
+                <p><b>Uygulama Katmanı:</b> Kullanıcı uygulamalarının çalıştığı katman.</p>
+                <br>
+                <p><button id="buton2" onclick="tamamla(2)">Okudum</button></p>
+            </div>
+            <li onclick="ac('3');">Bellek Yönetimi <div class="daire" id="daire3"></div>
+            </li>
+            <div class="icerik" id="icerik3">
+                <h3>Bellek Yönetimi Nedir?</h3>
+                <p>Bellek yönetimi, işletim sisteminin RAM'i etkin bir şekilde tahsis etmesi ve yönetmesidir. Bu, sistem
+                    performansını ve verimliliğini doğrudan etkiler.</p>
+                <br>
+                <h3>Bellek Yönetim Teknikleri</h3>
+                <p><b>Sayfalama:</b> Belleğin küçük bloklar halinde yönetilmesi.</p>
+                <br>
+                <p><b>Segmentasyon:</b> Belleğin mantıksal bölümler halinde yönetilmesi.</p>
+                <br>
+                <p><b>Sanal Bellek:</b> Fiziksel belleğin daha büyük bir mantıksal alan gibi kullanılması.</p>
+                <br>
+                <h3>Bellek Yönetim Stratejileri</h3>
+                <p><b>Fiziksel Bellek Tahsisi:</b> Fiziksel RAM'in programlara tahsisi.</p>
+                <br>
+                <p><b>Yer Değiştirme (Swapping):</b> Bellek yetersiz olduğunda süreçlerin disk belleğine taşınması.</p>
+                <br>
+                <p><b>Bellek Koruması:</b> Süreçlerin birbirlerinin belleğine erişimini engelleme.</p>
+                <br>
+                <p><button id="buton3" onclick="tamamla(3)">Okudum</button></p>
+            </div>
+            <li onclick="ac('4');">Dosya Sistemleri <div class="daire" id="daire4"></div>
+            </li>
+            <div class="icerik" id="icerik4">
+                <h3>Dosya Sistemi Nedir?</h3>
+                <p>Dosya sistemi, verilerin depolanmasını, düzenlenmesini ve yönetilmesini sağlayan yapı ve yöntemler
+                    bütünüdür.</p>
+                <br>
+                <h3>Dosya Sistem Türleri</h3>
+                <p><b>FAT (File Allocation Table):</b> Eski ama yaygın olarak kullanılan bir dosya sistemi.</p>
+                <br>
+                <p><b>NTFS (New Technology File System):</b> Windows işletim sistemlerinde kullanılan modern dosya
+                    sistemi.</p>
+                <br>
+                <p><b>EXT (Extended File System):</b> Linux dağıtımlarında yaygın olarak kullanılan dosya sistemi
+                    türleri (ext2, ext3, ext4).</p>
+                <br>
+                <h3>Dosya Sistemi Yapıları</h3>
+                <p><b>Klasörler ve Dizinler:</b> Dosyaların organize edildiği yapılar.</p>
+                <br>
+                <p><b>Dosya İzinleri:</b> Dosyalara kimlerin erişebileceğini belirleyen izinler.</p>
+                <br>
+                <p><b>Metaveri:</b> Dosyalar hakkında bilgi içeren veri (oluşturma tarihi, boyut, dosya türü vb.).</p>
+                <br>
+                <h3>Dosya Sistemi İşlevleri</h3>
+                <p><b>Veri Depolama:</b> Verilerin kalıcı olarak saklanması.</p>
+                <br>
+                <p><b>Veri Düzenleme:</b> Verilerin mantıksal bir düzen içinde organize edilmesi.</p>
+                <br>
+                <p><b>Veri Erişimi:</b> Verilere hızlı ve etkin bir şekilde erişim sağlama.</p>
+                <br>
+                <p><button id="buton4" onclick="tamamla(4)">Okudum</button></p>
+            </div>
+        </ul>
+
+        <button id="sinavgiris" onclick="NetSin()">Sınava Başla</button>
+        <br>
+        <div id="sorular">
+            <ul class="baslik-liste">
+                <li>1.</li>
+                <div class="icerik">
+                    <h3>İşletim sisteminin kalbi olarak tanımlanan bileşen hangisidir?</h3><br>
+                    <p><input type="radio" name="Soru1" id="1-a"><b>A) </b>Dosya Sistemi</p><br>
+                    <p><input type="radio" name="Soru1" id="1-b"><b>B) </b>Kullanıcı Arayüzü</p><br>
+                    <p><input type="radio" name="Soru1" id="1-c"><b>C) </b>Çekirdek (Kernel)</p><br>
+                    <p><input type="radio" name="Soru1" id="1-d"><b>D) </b>RAM</p><br>
+                </div>
+                <li>2.</li>
+                <div class="icerik">
+                    <h3>Aşağıdaki işletim sistemlerinden hangisi mobil cihazlarda kullanılır?</h3><br>
+                    <p><input type="radio" name="Soru2" id="2-a"><b>A) </b>Windows</p><br>
+                    <p><input type="radio" name="Soru2" id="2-b"><b>B) </b>macOS</p><br>
+                    <p><input type="radio" name="Soru2" id="2-c"><b>C) </b>Linux</p><br>
+                    <p><input type="radio" name="Soru2" id="2-d"><b>D) </b>Android</p><br>
+                </div>
+                <li>3.</li>
+                <div class="icerik">
+                    <h3>Hangi bellek yönetim tekniği bellek alanlarını mantıksal bölümler halinde yönetir?</h3><br>
+                    <p><input type="radio" name="Soru3" id="3-a"><b>A) </b>Sayfalama</p><br>
+                    <p><input type="radio" name="Soru3" id="3-b"><b>B) </b>Segmentasyon</p><br>
+                    <p><input type="radio" name="Soru3" id="3-c"><b>C) </b>Sanal Bellek</p><br>
+                    <p><input type="radio" name="Soru3" id="3-d"><b>D) </b>Yer Değiştirme</p><br>
+                </div>
+                <li>4.</li>
+                <div class="icerik">
+                    <h3>Aşağıdakilerden hangisi dosya sistemlerinden biridir?</h3><br>
+                    <p><input type="radio" name="Soru4" id="4-a"><b>A) </b>EXT</p><br>
+                    <p><input type="radio" name="Soru4" id="4-b"><b>B) </b>GUI</p><br>
+                    <p><input type="radio" name="Soru4" id="4-c"><b>C) </b>CLI</p><br>
+                    <p><input type="radio" name="Soru4" id="4-d"><b>D) </b>NT</p><br>
+                </div>
+                <li>5.</li>
+                <div class="icerik">
+                    <h3>Hangi işletim sistemi katmanı, kullanıcı uygulamalarının çalıştığı katmandır?</h3><br>
+                    <p><input type="radio" name="Soru5" id="5-a"><b>A) </b>Donanım</p><br>
+                    <p><input type="radio" name="Soru5" id="5-b"><b>B) </b>Çekirdek</p><br>
+                    <p><input type="radio" name="Soru5" id="5-c"><b>C) </b>Sistem Çağrıları</p><br>
+                    <p><input type="radio" name="Soru5" id="5-d"><b>D) </b>Uygulama Katmanı</p><br>
+                </div>
+                <li>6.</li>
+                <div class="icerik">
+                    <h3>Aşağıdaki işletim sistemi türlerinden hangisi sunuculara yöneliktir?</h3><br>
+                    <p><input type="radio" name="Soru6" id="6-a"><b>A) </b>Windows Server</p><br>
+                    <p><input type="radio" name="Soru6" id="6-b"><b>B) </b>macOS</p><br>
+                    <p><input type="radio" name="Soru6" id="6-c"><b>C) </b>Android</p><br>
+                    <p><input type="radio" name="Soru6" id="6-d"><b>D) </b>Linux Mint</p><br>
+                </div>
+                <li>7.</li>
+                <div class="icerik">
+                    <h3>İşletim sistemi mimarisinde çekirdek ve kullanıcı hizmetlerinin minimal bir çekirdek üzerinde çalıştığı mimari türü nedir?</h3><br>
+                    <p><input type="radio" name="Soru7" id="7-a"><b>A) </b>Monolitik Çekirdek</p><br>
+                    <p><input type="radio" name="Soru7" id="7-b"><b>B) </b>Mikro Çekirdek</p><br>
+                    <p><input type="radio" name="Soru7" id="7-c"><b>C) </b>Modüler Çekirdek</p><br>
+                    <p><input type="radio" name="Soru7" id="7-d"><b>D) </b>Hibrid Çekirdek</p><br>
+                </div>
+                <li>8.</li>
+                <div class="icerik">
+                    <h3>Hangi dosya sistemi, Windows işletim sistemlerinde yaygın olarak kullanılır?</h3><br>
+                    <p><input type="radio" name="Soru8" id="8-a"><b>A) </b>EXT4</p><br>
+                    <p><input type="radio" name="Soru8" id="8-b"><b>B) </b>NTFS</p><br>
+                    <p><input type="radio" name="Soru8" id="8-c"><b>C) </b>HFS+</p><br>
+                    <p><input type="radio" name="Soru8" id="8-d"><b>D) </b>FAT32</p><br>
+                </div>
+                <li>9.</li>
+                <div class="icerik">
+                    <h3>Bellek yetersiz olduğunda süreçlerin disk belleğine taşınmasını sağlayan strateji nedir?</h3><br>
+                    <p><input type="radio" name="Soru9" id="9-a"><b>A) </b>Sayfalama</p><br>
+                    <p><input type="radio" name="Soru9" id="9-b"><b>B) </b>Segmentasyon</p><br>
+                    <p><input type="radio" name="Soru9" id="9-c"><b>C) </b>Sanal Bellek</p><br>
+                    <p><input type="radio" name="Soru9" id="9-d"><b>D) </b>Yer Değiştirme (Swapping)</p><br>
+                </div>
+                <li>10.</li>
+                <div class="icerik">
+                    <h3>İşletim sistemlerinin güvenlik işlevlerinden biri olan, süreçlerin birbirlerinin belleğine erişimini engelleme nedir?</h3><br>
+                    <p><input type="radio" name="Soru10" id="10-a"><b>A) </b>Fiziksel Bellek Tahsisi</p><br>
+                    <p><input type="radio" name="Soru10" id="10-b"><b>B) </b>Yer Değiştirme</p><br>
+                    <p><input type="radio" name="Soru10" id="10-c"><b>C) </b>Bellek Koruması</p><br>
+                    <p><input type="radio" name="Soru10" id="10-d"><b>D) </b>Sayfalama</p><br>
+                </div>
+            </ul>
+        </div>
+        <button id="sinavTamamla" data-course="OS">Sınavı Tamamla</button>
+    </main>
+
+
+    <script type="module" src="sinav.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siber Güvenlik</title>
+    <link rel="stylesheet" href="still.css">
+    <script src="script.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <span class="logo">CODEDU.</span>
+        <nav class="navi">
+
+            <a href="../Kurslar.html">Kurslar</a>
+            <a href="../profile.html">Profil</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Siber Güvenlik</h2><br><br>
+        <ul class="baslik-liste" id="kurs">
+            <li onclick="ac('1');">Siber Güvenliğe Giriş <div class="daire" id="daire1"></div>
+            </li>
+            <div class="icerik" id="icerik1">
+                <h3>Siber Güvenlik Nedir?</h3><br>
+                <p>Siber güvenlik, bilgi teknolojisi ve internet üzerinde bulunan sistemlerin, ağların, programların ve
+                    verilerin kötü niyetli saldırılardan, hasarlardan veya yetkisiz erişimlerden korunmasını sağlayan
+                    uygulamalar ve süreçler bütünüdür.</p><br>
+                <h3>Siber Güvenliğin Önemi</h3><br>
+                <p><b>Veri Koruma:</b> Kullanıcıların ve şirketlerin hassas bilgilerini korumak için hayati önem taşır.
+                </p><br>
+                <p><b>Güvenlik İhlallerini Önleme:</b> Siber saldırılara karşı koruma sağlar ve veri ihlallerini önler.
+                </p><br>
+                <p><b>İş Sürekliliği:</b> Güvenlik tehditlerine karşı önlem almak, iş operasyonlarının kesintisiz devam
+                    etmesini sağlar.</p><br>
+                <h3>Siber Tehdit Türleri</h3><br>
+                <p><b>Virüsler ve Zararlı Yazılımlar:</b> Bilgisayar sistemlerine zarar veren veya kontrolünü ele
+                    geçiren yazılımlar.</p><br>
+                <p><b>Phishing (Oltalama):</b> Kullanıcıları kandırarak hassas bilgilerini ele geçirme yöntemi.</p><br>
+                <p><b>Dağıtık Hizmet Engelleme (DDoS) Saldırıları:</b> Hedef sistemleri aşırı yükleyerek hizmet veremez
+                    hale getirme.</p><br>
+                <p><button id="buton1" onclick="tamamla(1)">Okudum</button></p>
+            </div>
+            <li onclick="ac('2');">Ağ Güvenliği <div class="daire" id="daire2"></div>
+            </li>
+            <div class="icerik" id="icerik2">
+                <h3>Ağ Güvenliği Nedir?</h3><br>
+                <p>Ağ güvenliği, bir bilgisayar ağı üzerindeki verilerin yetkisiz erişimlerden, kötü amaçlı
+                    yazılımlardan ve saldırılardan korunmasını sağlamak için kullanılan politikalar ve uygulamalardır.
+                </p><br>
+                <h3>Ağ Güvenlik Bileşenleri</h3><br>
+                <p><b>Güvenlik Duvarları (Firewall):</b> Ağı gelen ve giden trafiği izleyen ve kontrol eden güvenlik
+                    sistemleridir.</p><br>
+                <p><b>VPN (Virtual Private Network):</b> İnternet üzerinden güvenli ve şifreli bağlantılar sağlar.</p>
+                <br>
+                <p><b>IDS ve IPS:</b> Giriş Tespit Sistemleri (IDS) ve Giriş Önleme Sistemleri (IPS) ağ trafiğini izler
+                    ve olası tehditlere karşı önlem alır.</p><br>
+                <h3>Ağ Güvenlik Protokolleri</h3><br>
+                <p><b>HTTPS:</b> Web tarayıcıları ve web sunucuları arasındaki iletişimi şifreler.</p><br>
+                <p><b>SSL/TLS:</b> İletişim kanallarını güvence altına almak için kullanılan şifreleme protokolleridir.
+                </p><br>
+                <p><b>IPSec:</b> İnternet Protokolü (IP) üzerinden güvenli veri iletimini sağlar.</p><br>
+                <p><button id="buton2" onclick="tamamla(2)">Okudum</button></p>
+            </div>
+            <li onclick="ac('3');">Bilgisayar Güvenliği <div class="daire" id="daire3"></div>
+            </li>
+            <div class="icerik" id="icerik3">
+                <h3>Bilgisayar Güvenliği Nedir?</h3><br>
+                <p>Bilgisayar güvenliği, bilgisayar sistemlerinin ve verilerin yetkisiz erişim, değişiklik veya yıkımdan
+                    korunmasıdır. Bu, donanım, yazılım ve verilerin korunmasını içerir.</p><br>
+                <h3>Bilgisayar Güvenliği Önlemleri</h3><br>
+                <p><b>Antivirüs Yazılımları:</b> Kötü amaçlı yazılımları tespit eder ve temizler.</p><br>
+                <p><b>Güncelleme ve Yama Yönetimi:</b> Yazılımların güncel tutulması ve güvenlik açıklarının
+                    kapatılması.</p><br>
+                <p><b>Şifre Yönetimi:</b> Güçlü şifrelerin oluşturulması ve yönetimi.</p><br>
+                <h3>Bilgisayar Güvenlik Politikaları</h3><br>
+                <p><b>Kullanıcı Eğitimleri:</b> Çalışanlara siber güvenlik farkındalığı kazandırma.</p><br>
+                <p><b>Veri Yedekleme:</b> Veri kaybına karşı düzenli yedekleme yapma.</p><br>
+                <p><b>Yetki ve Erişim Kontrolü:</b> Kullanıcıların yetkilerini sınırlandırma ve erişim kontrolleri.</p>
+                <br>
+                <p><button id="buton3" onclick="tamamla(3)">Okudum</button></p>
+            </div>
+            <li onclick="ac('4');">Uygulama Güvenliği <div class="daire" id="daire4"></div>
+            </li>
+            <div class="icerik" id="icerik4">
+                <h3>Uygulama Güvenliği Nedir?</h3><br>
+                <p>Uygulama güvenliği, yazılım uygulamalarının tasarım, geliştirme ve dağıtım aşamalarında güvenlik
+                    açıklarının önlenmesi ve giderilmesi sürecidir.</p><br>
+                <h3>Uygulama Güvenliği Tehditleri</h3><br>
+                <p><b>SQL Enjeksiyonu:</b> Veritabanı sorgularına zararlı kod eklenmesi.</p><br>
+                <p><b>XSS (Cross-Site Scripting):</b> Web uygulamalarına zararlı komut dosyaları eklenmesi.</p><br>
+                <p><b>CSRF (Cross-Site Request Forgery):</b> Kullanıcının kimliği kullanılarak yetkisiz işlemler
+                    yapılması.</p><br>
+                <h3>Uygulama Güvenliği Uygulamaları</h3><br>
+                <p><b>Güvenli Kodlama Uygulamaları:</b> Yazılım geliştirme sürecinde güvenlik önlemlerinin entegre
+                    edilmesi.</p><br>
+                <p><b>Penetrasyon Testleri:</b> Uygulama güvenlik açıklarının tespit edilmesi için yapılan testler.</p>
+                <br>
+                <p><b>Güvenlik Duvarları ve WAF:</b> Web uygulama güvenlik duvarları (WAF) uygulamaları korur.</p><br>
+                <p><button id="buton4" onclick="tamamla(4)">Okudum</button></p>
+            </div>
+        </ul>
+
+        <button id="sinavgiris" onclick="NetSin()">Sınava Başla</button>
+        <br>
+        <div id="sorular">
+            <ul class="baslik-liste">
+                <li>1.</li>
+                <div class="icerik">
+                    <h3>Siber güvenliğin temel amacı nedir?</h3><br>
+                    <p><input type="radio" name="Soru1" id="1-a"><b>A) </b>Veri ihlallerini teşvik etmek</p><br>
+                    <p><input type="radio" name="Soru1" id="1-b"><b>B) </b>Veri koruma ve iş sürekliliğini sağlamak</p><br>
+                    <p><input type="radio" name="Soru1" id="1-c"><b>C) </b>Kötü niyetli yazılımlar oluşturmak</p><br>
+                    <p><input type="radio" name="Soru1" id="1-d"><b>D) </b>Bilgisayar oyunları geliştirmek</p><br>
+                </div>
+                <li>2.</li>
+                <div class="icerik">
+                    <h3>Ağ güvenliğinde kullanılan temel cihazlardan biri hangisidir?</h3><br>
+                    <p><input type="radio" name="Soru2" id="2-a"><b>A) </b>Modem</p><br>
+                    <p><input type="radio" name="Soru2" id="2-b"><b>B) </b>Güvenlik Duvarı (Firewall)</p><br>
+                    <p><input type="radio" name="Soru2" id="2-c"><b>C) </b>Yazıcı</p><br>
+                    <p><input type="radio" name="Soru2" id="2-d"><b>D) </b>Fare</p><br>
+                </div>
+                <li>3.</li>
+                <div class="icerik">
+                    <h3>Hangi saldırı türü, kullanıcının hassas bilgilerini çalmak için sahte bir web sitesi oluşturur?</h3><br>
+                    <p><input type="radio" name="Soru3" id="3-a"><b>A) </b>Virüs</p><br>
+                    <p><input type="radio" name="Soru3" id="3-b"><b>B) </b>Phishing (Oltalama)</p><br>
+                    <p><input type="radio" name="Soru3" id="3-c"><b>C) </b>DDoS Saldırısı</p><br>
+                    <p><input type="radio" name="Soru3" id="3-d"><b>D) </b>SQL Enjeksiyonu</p><br>
+                </div>
+                <li>4.</li>
+                <div class="icerik">
+                    <h3>Bir bilgisayar ağı üzerindeki verileri yetkisiz erişimlerden koruma yöntemine ne ad verilir?</h3><br>
+                    <p><input type="radio" name="Soru4" id="4-a"><b>A) </b>Veritabanı Yönetimi</p><br>
+                    <p><input type="radio" name="Soru4" id="4-b"><b>B) </b>Ağ Güvenliği</p><br>
+                    <p><input type="radio" name="Soru4" id="4-c"><b>C) </b>Dosya Yönetimi</p><br>
+                    <p><input type="radio" name="Soru4" id="4-d"><b>D) </b>İşletim Sistemi Yönetimi</p><br>
+                </div>
+                <li>5.</li>
+                <div class="icerik">
+                    <h3>Hangi protokol, web tarayıcıları ve web sunucuları arasındaki iletişimi şifreler?</h3><br>
+                    <p><input type="radio" name="Soru5" id="5-a"><b>A) </b>HTTP</p><br>
+                    <p><input type="radio" name="Soru5" id="5-b"><b>B) </b>FTP</p><br>
+                    <p><input type="radio" name="Soru5" id="5-c"><b>C) </b>SMTP</p><br>
+                    <p><input type="radio" name="Soru5" id="5-d"><b>D) </b>HTTPS</p><br>
+                </div>
+                <li>6.</li>
+                <div class="icerik">
+                    <h3>Kötü amaçlı yazılımları tespit eden ve temizleyen yazılım türü nedir?</h3><br>
+                    <p><input type="radio" name="Soru6" id="6-a"><b>A) </b>Güvenlik Duvarı</p><br>
+                    <p><input type="radio" name="Soru6" id="6-b"><b>B) </b>Antivirüs Yazılımı</p><br>
+                    <p><input type="radio" name="Soru6" id="6-c"><b>C) </b>Yedekleme Yazılımı</p><br>
+                    <p><input type="radio" name="Soru6" id="6-d"><b>D) </b>Şifreleme Yazılımı</p><br>
+                </div>
+                <li>7.</li>
+                <div class="icerik">
+                    <h3>Uygulama güvenliğinde yaygın olarak kullanılan test yöntemi nedir?</h3><br>
+                    <p><input type="radio" name="Soru7" id="7-a"><b>A) </b>Penetrasyon Testleri</p><br>
+                    <p><input type="radio" name="Soru7" id="7-b"><b>B) </b>Kullanıcı Testleri</p><br>
+                    <p><input type="radio" name="Soru7" id="7-c"><b>C) </b>Performans Testleri</p><br>
+                    <p><input type="radio" name="Soru7" id="7-d"><b>D) </b>Yazılım Testleri</p><br>
+                </div>
+                <li>8.</li>
+                <div class="icerik">
+                    <h3>Bir veritabanına zararlı komutlar eklenmesi yoluyla gerçekleştirilen saldırı nedir?</h3><br>
+                    <p><input type="radio" name="Soru8" id="8-a"><b>A) </b>XSS (Cross-Site Scripting)</p><br>
+                    <p><input type="radio" name="Soru8" id="8-b"><b>B) </b>CSRF (Cross-Site Request Forgery)</p><br>
+                    <p><input type="radio" name="Soru8" id="8-c"><b>C) </b>SQL Enjeksiyonu</p><br>
+                    <p><input type="radio" name="Soru8" id="8-d"><b>D) </b>Brute Force Saldırısı</p><br>
+                </div>
+                <li>9.</li>
+                <div class="icerik">
+                    <h3>VPN (Virtual Private Network) ne işe yarar?</h3><br>
+                    <p><input type="radio" name="Soru9" id="9-a"><b>A) </b>Veri sıkıştırma</p><br>
+                    <p><input type="radio" name="Soru9" id="9-b"><b>B) </b>İnternet erişimi engelleme</p><br>
+                    <p><input type="radio" name="Soru9" id="9-c"><b>C) </b>Güvenli ve şifreli bağlantılar sağlama</p><br>
+                    <p><input type="radio" name="Soru9" id="9-d"><b>D) </b>Donanım koruma</p><br>
+                </div>
+                <li>10.</li>
+                <div class="icerik">
+                    <h3>Hangi saldırı türü, web uygulamalarına zararlı komut dosyaları eklenmesi ile gerçekleştirilir?</h3><br>
+                    <p><input type="radio" name="Soru10" id="10-a"><b>A) </b>SQL Enjeksiyonu</p><br>
+                    <p><input type="radio" name="Soru10" id="10-b"><b>B) </b>XSS (Cross-Site Scripting)</p><br>
+                    <p><input type="radio" name="Soru10" id="10-c"><b>C) </b>DDoS Saldırısı</p><br>
+                    <p><input type="radio" name="Soru10" id="10-d"><b>D) </b>Phishing (Oltalama)</p><br>
+                </div>
+            </ul>
+        </div>
+        <button id="sinavTamamla" data-course="CS">Sınavı Tamamla</button>
+    </main>
+
+
+    <script type="module" src="sinav.js"></script>
+
+</body>
+
+</html>
