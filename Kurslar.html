@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurslar</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background: url("https://wallpaperaccess.com/full/5922597.jpg") no-repeat;
+            color: #fff;
+            background-size: cover;
+
+        }
+
+        header {
+            position: inherit;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: #09001d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 32px;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            filter: drop-shadow(0 0 5px #09001d);
+        }
+
+        nav a {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .3s;
+        }
+
+        .navi a:hover {
+            color: #21c400;
+        }
+
+        .navi a:hover,
+        .navi a:active,
+        .navi a:focus {
+            color: #21c400;
+        }
+
+        main {
+            width: 950px;
+            height: auto;
+            background: transparent;
+            position: inherit;
+            display: flex;
+            /* Flex container olarak tanımla */
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto 0;
+            background: transparent;
+            text-align: center;
+            /* Yatayda ortalamak için otomatik marj ekle */
+        }
+
+        /* Ana liste */
+        .ana-liste {
+            list-style: none;
+            /* Madde işaretlerini kaldır */
+            padding: 0;
+            margin: 0;
+            width: 950px;
+        }
+
+        /* Ana liste elemanları */
+        .ana-liste>li {
+            margin-bottom: 20px;
+            /* Her bir ana liste elemanı arasında boşluk bırak */
+            background-color: #09001d;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Başlık stilleri */
+        .ana-liste>li>h2 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        /* Alt liste */
+        .alt-liste {
+            list-style: none;
+            /* Madde işaretlerini kaldır */
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Alt liste elemanları */
+        .alt-liste>li {
+            color: #b3b3b3;
+            margin-left: 20px;
+            /* Alt liste elemanlarını sağa kaydır */
+            padding: 5px 0;
+        }
+
+        /* Hover efekti */
+        .ana-liste>li:hover {
+            background-color: #000;
+            transition: background-color 0.3s ease;
+        }
+
+        .ana-liste>li:hover>h2 {
+            color: #21c400;
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span class="logo">CODEDU.</span>
+        <nav class="navi">
+            <a href="Kurslar.html">Kurslar</a>
+            <a href="profile.html">Profil</a>
+        </nav>
+    </header>
+
+    <main>
+        <ul class="ana-liste">
+            <li>
+                <h2 onclick="window.location.href='Kurslar/web.html';">Web Tasarım</h2>
+                <ul class="alt-liste">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </li>
+            <li onclick="window.location.href='Kurslar/network.html';">
+                <h2>Network</h2>
+                <ul class="alt-liste">
+                    <li>Ağ Temelleri ve İlkeleri</li>
+                    <li>Ağ Protokolleri</li>
+                    <li>Yönlendirme ve Anahtarlam</li>
+                    <li>OSI katmanları</li>
+                </ul>
+            </li>
+            <li onclick="window.location.href='Kurslar/CS.html';">
+                <h2>Siber Güvenlik</h2>
+                <ul class="alt-liste">
+                    <li>Offensive Security (OffSec)</li>
+                    <li>Blue Team</li>
+                    <li>Bilgi Güvenliği</li>
+                </ul>
+            </li>
+            <li onclick="window.location.href='Kurslar/OS.html';">
+                <h2>İşletim Sistemleri</h2>
+                <ul class="alt-liste">
+                    <li>Sızma Testleri</li>
+                    <li>Kriptografi ve Protokoller</li>
+                    <li>Güvenlik Araçları</li>
+                    <li>Tehdit İstihbaratı</li>
+                </ul>
+            </li>
+        </ul>
+    </main>
+
+
+</body>
+
+</html>

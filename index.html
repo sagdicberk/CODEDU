@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CODEDU</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /*still başla */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            color: white;
+
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 32px;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            filter: drop-shadow(0 0 5px #09001d);
+        }
+
+        nav a {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .3s;
+        }
+
+        .navi a:hover {
+            color: #21c400;
+        }
+
+        .navi a:hover,
+        .navi a:active,
+        .navi a:focus {
+            color: #21c400;
+        }
+
+        main {
+            min-height: 100vh;
+            background: url("https://wallpaperaccess.com/full/5922597.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .home {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home-icerik {
+            max-width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .home-icerik h1 {
+            font-size: 78px;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+        }
+
+        .home-icerik p {
+            font-size: 16px;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+            margin-bottom: 30px;
+        }
+
+        .home-icerik button {
+            width: 190px;
+            height: 55px;
+            background-color: #21c400;
+            border: 2px solid #fff;
+            outline: none;
+            border-radius: 6px;
+            box-shadow: 0 0 10px #21c400;
+            font-size: 18px;
+            color: #fff;
+            letter-spacing: 1px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .5s;
+
+        }
+
+        .home-icerik button:hover {
+            background: #001d11;
+            box-shadow: none;
+        }
+
+        .social{
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        .social:hover{
+            color:#21c400;
+        }
+    </style>
+
+    <script>
+        function login() {
+            window.location.href = "login.html"
+        }
+
+        function hakkımızda() {
+            document.getElementById("icerik-baslik").innerHTML = "Hakkımızda";
+            document.getElementById("icerik").innerHTML = "CODEDU, bilgisayar mühendisliği alanında öğrenmek ve gelişmek isteyenler için bir öğrenme platformudur. Deneyimli ve sıkı çalışan eğitmenlerin hazırladığı kurslarla desteklenen CODEDU, geniş bir konu yelpazesi içeren dersler ve interaktif projeler sunar. Potansiyelinizi keşfetmek ve bilgisayar mühendisliği alanında ilerlemek için CODEDU'ya katılın!";
+            document.getElementById("buton").hidden = true;
+        }
+
+        function egitim() {
+            document.getElementById("icerik-baslik").innerHTML = "Eğitimlerimiz";
+            document.getElementById("icerik").innerHTML = "CODEDU'da, Linux işletim sistemi, web tasarım, HTML, CSS, JavaScript ve ağ teknolojileri gibi çeşitli konularda kapsamlı eğitimler bulabilirsiniz. Her bir kurs, sektörde deneyimli eğitmenler tarafından özenle hazırlanmıştır ve katılımcılara temel bilgilerden ileri düzeye kadar kapsamlı bir öğrenme deneyimi sunar. Siz de CODEDU'da ihtiyacınıza uygun eğitimleri keşfedin ve kariyerinizde bir adım öne geçin!";
+            document.getElementById("buton").hidden = true;
+        }
+
+        function iletisim() {
+            document.getElementById("icerik-baslik").innerHTML = "İletişim";
+            document.getElementById("icerik").innerHTML = "CODEDU ile iletişim kurmak için aşağıdaki bilgileri kullanabilirsiniz. Her türlü sorunuz, öneriniz veya geri bildiriminiz bizim için değerlidir. Bizimle iletişime geçmekten çekinmeyin, size yardımcı olmaktan memnuniyet duyarız.<br>info@codedu.com<br>+90 123 456 7890<br>CODEDU Merkez Ofis, Örnek Mahallesi, Örnek Sokak No: 123, İstanbul, Türkiye<br><a href='https://www.facebook.com' style=' color:white; '>Facebook<a/> | <a href='https://www.x.com' style='color:white;'>Twitter<a/> | <a href='https://www.linkedin.com' style='color:white;'>LinkedIn<a/>";
+            document.getElementById("buton").hidden = true;
+        }
+
+        function anasayfa() {
+            document.getElementById("icerik-baslik").innerHTML = "Hoşgeldiniz";
+            document.getElementById("icerik").innerHTML = "CODEDU, bilgisayar mühendisliği alanında uzmanlaşmak isteyenler için tasarlanmış yenilikçi bir platformdur. Yüksek kaliteli içerikleri ve etkileşimli öğrenme deneyimleriyle, bilgi ve birikiminizi artırmanıza yardımcı olur. Hemen katılın ve bilgisayar mühendisliği yolculuğunuzda öne çıkın!";
+            document.getElementById("buton").hidden = false;
+        }
+    </script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <span class="logo">CODEDU.</span>
+            <nav class="navi">
+                <a href="#" onclick="anasayfa()">Anasayfa</a>
+                <a href="#" onclick="hakkımızda()">Hakkımızda</a>
+                <a href="#" onclick="egitim()">Eğitimlerimiz</a>
+                <a href="#" onclick="iletisim()">İletişim</a>
+            </nav>
+        </header>
+
+        <section class="home">
+            <div class="home-icerik">
+                <h1 id="icerik-baslik">Hoşgeldiniz</h1>
+                <p id="icerik">CODEDU, bilgisayar mühendisliği alanında uzmanlaşmak isteyenler için tasarlanmış
+                    yenilikçi bir platformdur. Yüksek kaliteli içerikleri ve etkileşimli öğrenme deneyimleriyle, bilgi
+                    ve birikiminizi artırmanıza yardımcı olur. Hemen katılın ve bilgisayar mühendisliği yolculuğunuzda
+                    öne çıkın!</p>
+                <button onclick="login();" id="buton">Başla</button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
