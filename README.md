@@ -1,0 +1,1 @@
+My goal in this Project was to create a Saas Project using the features of the Firebase platform. With the CODEDU Site, I aimed to provide training texts on basic topics and then evaluate them with a test. I designed a progress screen on the profile page so that I could see the trainings we had completed. I hope you enjoy it.
